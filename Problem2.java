@@ -19,7 +19,6 @@ public class Problem2 {
       if (fib % 2 == 0) {
       
         sum += fib;
-        System.out.print(fib + " ");
       }
       
       fib1 = fib2;
