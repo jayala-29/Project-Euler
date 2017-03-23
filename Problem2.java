@@ -8,11 +8,12 @@ public class Problem2 {
 
   public static void main(String[] args) {
   
+    int sum = 0;
+   
     int fib1 = 1;
     int fib2 = 1;
     
     int fib = fib1 + fib2;
-    int sum = 0;
     
     while (fib <= 4000000) {
       
