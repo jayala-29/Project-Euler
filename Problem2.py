@@ -1,3 +1,4 @@
+# python implementation
 def Problem2 (n) :
     sum = 0
     fib1 = 1
