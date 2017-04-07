@@ -1,3 +1,4 @@
+# python implementation
 def Problem14 (n) :
 
     i = 2
