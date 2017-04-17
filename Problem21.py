@@ -1,20 +1,21 @@
 # python implementation
-import math
-
-def Problem21 (n) :
-  
-  divisors = [1]
-  result = 1
-  
-  for j in xrange (1, n) :
+def Problem21 (first, last):
     
-    for i in xrange(2,j) :
+    tracker = []
+    
+    for i in range (first, last + 1) :
+      s = 0
+      for j in range (1,i) :
+        if i % j == 0 : 
+          s += j
+      tracker += [s]
       
-      if n % i == 0 :
-        
-        divisors.append(i)
-        result += i
-  
-  return result
-  
-print Problem21 (10000)
+    pairs = []
+    
+    for i in range(last - first + 1) :
+        ind = tracker[i]
+        if i + first < ind and first <= ind and ind <= last and tracker[ind - first] == i + first :
+            pairs.append ([i + first, ind])
+    return pairs
+ 
+print sum ([sum (pair) for pair in Problem21 (1,10000)])
